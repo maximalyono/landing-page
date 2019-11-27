@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: tekkadan
+ labels: 
+   app: landing-page-tekkadan
+spec:
+ replicas: 3
+ selector: 
+   matchLabels:
+     app: tekkadan
+ template:
+   metadata:
+     labels:
+       app: tekkadan
+   spec: 
+     containers:
+     - name: tekkadan
+       image: maximalyono/tekkadan-ci:9
+       ports:
+       - containerPort: 80
+

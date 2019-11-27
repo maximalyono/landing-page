@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: tekkadan-svc
+spec:
+  selector:
+    app: tekkadan
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30088
+  type: NodePort
