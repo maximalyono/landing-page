@@ -16,7 +16,7 @@ spec:
    spec: 
      containers:
      - name: tekkadan
-       image: maximalyono/tekkadan-ci:BUILD_NUMBER
+       image: maximalyono/tekkadan-ci
        ports:
        - containerPort: 80
 
