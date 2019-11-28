@@ -1,7 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: tekkadan
+ namespace: production
+ name: tekkadan-prod
  labels: 
    app: landing-page-tekkadan
 spec:
