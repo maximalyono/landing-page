@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ namespace: staging
+ name: tekkadan-stage
+ labels: 
+   app: landing-page-tekkadan
+spec:
+ replicas: 3
+ selector: 
+   matchLabels:
+     app: tekkadan
+ template:
+   metadata:
+     labels:
+       app: tekkadan
+   spec: 
+     containers:
+     - name: tekkadan
+       image: maximalyono/tekkadan-ci-staging:BUILD_NUMBER
+       ports:
+       - containerPort: 80
+
