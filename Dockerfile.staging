@@ -8,7 +8,7 @@ run apk update && \
 
 workdir /var/www/localhost/htdocs/
 
-run git clone https://github.com/maximalyono/landing-page.git
+run git clone -b staging https://github.com/maximalyono/landing-page.git
 run mv /var/www/localhost/htdocs/landing-page/* /var/www/localhost/htdocs/
 
 run rm -rf /var/www/localhost/htdocs/landing-page
